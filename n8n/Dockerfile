@@ -1,11 +1,10 @@
 
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
 ARG N8N_VERSION
-
-FROM ${BUILD_FROM}
-
-
-
 RUN apk add --no-cache \
         nodejs=18.12.1-r0 \
         npm=9.1.2-r0 \

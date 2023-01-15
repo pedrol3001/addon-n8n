@@ -10,6 +10,7 @@ arch:
   - aarch64
   - amd64
   - i386
+image: node:16-alpine
 ports:
   80/tcp: 5678
 ports_description:
