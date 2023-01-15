@@ -14,4 +14,10 @@ ports:
   80/tcp: 5678
 ports_description:
   80/tcp: Web interface
-image: ghcr.io/pedrol3001/addon-n8n
+options:
+  log_level: info
+  seconds_between_quotes: 5
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  seconds_between_quotes: int(1,120)
+image: ghcr.io/pedrol3001/image-{arch}-addon-n8n
