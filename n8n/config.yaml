@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: n8n addon
-version: "1.2.0"
+version: "0.0.2"
 slug: n8n
 description: Add a n8n server to home assistant
 url: "https://github.com/home-assistant/addons-example/tree/main/example"
