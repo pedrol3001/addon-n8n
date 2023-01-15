@@ -12,3 +12,4 @@ labels:
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
   N8N_VERSION: "0.211.0"
+image: node:16

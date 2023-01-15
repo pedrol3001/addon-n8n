@@ -1,38 +1,10 @@
-ARG NODE_VERSION=16
 
-# 1. Create an image to build n8n
-FROM n8nio/base:${NODE_VERSION} as builder
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+ARG BUILD_FROM
+ARG N8N_VERSION
+FROM $BUILD_FROM
 
-COPY turbo.json package.json .npmrc pnpm-lock.yaml pnpm-workspace.yaml tsconfig.json ./
-COPY scripts ./scripts
-COPY packages ./packages
+RUN npm install n8n@$N8N_VERSION -g
 
-RUN apk add --update libc6-compat jq
-RUN corepack enable && corepack prepare --activate
-RUN chown -R node:node .
-USER node
-
-RUN pnpm install --frozen-lockfile
-RUN pnpm build
-RUN rm -rf node_modules
-RUN jq '{name: .name, version: .version}' packages/editor-ui/package.json > editor-ui.tmp; mv editor-ui.tmp packages/editor-ui/package.json
-RUN jq '{name: .name, version: .version}' packages/design-system/package.json > design-system.tmp; mv design-system.tmp packages/design-system/package.json
-RUN NODE_ENV=production pnpm install --prod --no-optional
-RUN find . -type f -name "*.ts" -o -name "*.js.map" -o -name "*.vue" -o -name "tsconfig.json" -o -name "*.tsbuildinfo" | xargs rm -rf
-RUN rm -rf packages/@n8n_io/eslint-config packages/editor-ui/src packages/editor-ui/node_modules packages/design-system
-RUN rm -rf patches .npmrc *.yaml node_modules/.cache packages/**/node_modules/.cache packages/**/.turbo .config .cache .local .node /tmp/*
-
-
-# 2. Start with a new clean image with just the code that is needed to run n8n
-FROM n8nio/base:${NODE_VERSION}
-COPY --from=builder /home/node /usr/local/lib/node_modules/n8n
-RUN ln -s /usr/local/lib/node_modules/n8n/packages/cli/bin/n8n /usr/local/bin/n8n
-
-RUN \
-	mkdir .n8n && \
-	chown node:node .n8n
-USER node
-
-ENV NODE_ENV=production
-
+# Copy root filesystem
 COPY rootfs /
