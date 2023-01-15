@@ -22,3 +22,5 @@ RUN set -eux; \
 USER root
 WORKDIR /data
 RUN apk --no-cache add su-exec
+
+COPY rootfs /
