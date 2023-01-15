@@ -10,11 +10,8 @@ arch:
   - aarch64
   - amd64
   - i386
-init: false
-map:
-  - share:rw
-options:
-  message: "Hello world..."
-schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+startup: before
+ports:
+  80/tcp: 5678
+ports_description:
+  80/tcp: Web interface
