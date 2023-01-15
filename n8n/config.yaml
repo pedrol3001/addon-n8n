@@ -14,3 +14,4 @@ ports:
   80/tcp: 5678
 ports_description:
   80/tcp: Web interface
+image: ghcr.io/pedrol3001/addon-n8n
