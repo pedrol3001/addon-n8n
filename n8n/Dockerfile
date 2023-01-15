@@ -22,7 +22,3 @@ RUN set -eux; \
 USER root
 WORKDIR /data
 RUN apk --no-cache add su-exec
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
-
-COPY rootfs /
