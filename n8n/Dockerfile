@@ -1,7 +1,7 @@
 
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.1.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
