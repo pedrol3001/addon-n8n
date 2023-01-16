@@ -15,5 +15,4 @@
 
 
 ## Run your program
-
-n8n start
+exec n8n start
