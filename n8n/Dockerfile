@@ -11,7 +11,7 @@ RUN \
         gcc \
         libc-dev \
         linux-headers \
-        make=4.3-r1 \
+        make \
         py3-pip \
         python3-dev \
         python3 \
