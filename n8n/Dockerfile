@@ -7,8 +7,8 @@ FROM ${BUILD_FROM}
 ARG N8N_VERSION
 RUN \
     apk add --no-cache \
-        nodejs=18.12.1-r0 \
-        npm=9.1.2-r0 \
+        nodejs \
+        npm \
     \
 		&& npm cache clear --force \
 		&& npm install n8n@${N8N_VERSION} -g
