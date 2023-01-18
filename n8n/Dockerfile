@@ -11,7 +11,7 @@ RUN \
         py3-pip \
     \
     && apk add --no-cache \
-        nodejs=17.9.0-r0 \
+        nodejs=16.17.1-r0 \
         npm=8.1.3-r0 \
     \
 		&& npm cache clear --force \
