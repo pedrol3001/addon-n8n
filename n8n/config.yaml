@@ -10,6 +10,7 @@ arch:
   - aarch64
   - amd64
   - i386
+host_pid: true
 ports:
   80/tcp: 5678
 ports_description:
