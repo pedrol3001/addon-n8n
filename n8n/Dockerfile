@@ -17,12 +17,11 @@ RUN \
         python3 \
     \
     && apk add --no-cache \
-        nodejs=16.19.0-r0 \
-        npm=8.18.3-r0 \
+        nodejs \
+        npm \
     \
 		&& npm cache clear --force \
 		&& npm install n8n@${N8N_VERSION} -g
 
-# Copy root filesystem
 # Copy root filesystem
 COPY rootfs /
