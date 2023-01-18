@@ -1,8 +1,7 @@
 
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
-# hadolint ignore=DL3006
+ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
 # Set shell
@@ -29,6 +28,4 @@ RUN \
 		&& npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
-COPY run.sh /
-RUN chmod a+x /run.sh
-CMD [ "/run.sh" ]
+COPY rootfs /

@@ -15,4 +15,8 @@
 
 
 ## Run your program
-exec n8n start
+## Print the message the user supplied, defaults to "Hello World..."
+bashio::log.info "${message:="Hello World..."}"
+
+## Run your program
+exec /usr/bin/run
