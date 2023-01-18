@@ -20,8 +20,8 @@ RUN \
         nodejs \
         npm \
     \
-		&& npm cache clear --force \
-		&& npm install n8n@${N8N_VERSION} -g
+    && npm cache clear --force \
+    && npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
 COPY rootfs /
