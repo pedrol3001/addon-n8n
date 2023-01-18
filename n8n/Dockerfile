@@ -29,4 +29,5 @@ RUN \
 		&& npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
-COPY rootfs /
+COPY run.sh /
+RUN chmod a+x /run.sh
