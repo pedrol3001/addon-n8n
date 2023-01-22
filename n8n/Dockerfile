@@ -1,5 +1,5 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
-ARG NODE_VERSION=18
+ARG NODE_VERSION=16
 ARG N8N_VERSION=latest
 
 FROM node:${NODE_VERSION}-alpine AS node
