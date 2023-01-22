@@ -1,27 +1,46 @@
-
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-ARG N8N_VERSION
-RUN \
-		apk add --no-cache --virtual .build-dependencies \
-        g++ \
-        gcc \
-        libc-dev \
-        linux-headers \
-        make \
-        py3-pip \
-        python3-dev \
-        python3 \
-    \
-    && apk add --no-cache \
-        nodejs \
-        npm \
-    \
-    && npm cache clear --force \
-    && npm install n8n@${N8N_VERSION} -g
+ARG NODE_VERSION=16
+FROM node:${NODE_VERSION}-alpine
+
+ARG N8N_VERSION=16
+RUN npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
 COPY rootfs /
+
+# Setup base
+RUN apk add --no-cache \
+    coreutils=9.1-r0 \
+    wget=1.21.3-r2
+
+# Build arguments
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_DESCRIPTION
+ARG BUILD_NAME
+ARG BUILD_REF
+ARG BUILD_REPOSITORY
+ARG BUILD_VERSION
+
+# Labels
+LABEL \
+    io.hass.name="${BUILD_NAME}" \
+    io.hass.description="${BUILD_DESCRIPTION}" \
+    io.hass.arch="${BUILD_ARCH}" \
+    io.hass.type="addon" \
+    io.hass.version=${BUILD_VERSION} \
+    maintainer="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.title="${BUILD_NAME}" \
+    org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
+    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
+    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REF} \
+    org.opencontainers.image.version=${BUILD_VERSION}
