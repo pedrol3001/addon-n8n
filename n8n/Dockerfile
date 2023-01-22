@@ -1,9 +1,18 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
+ARG NODE_VERSION=18
 ARG N8N_VERSION=latest
+
+FROM node:${NODE_VERSION}-alpine AS node
 
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
-FROM node:18-alpine
+
+COPY --from=node /usr/lib /usr/lib
+COPY --from=node /usr/local/share /usr/local/share
+COPY --from=node /usr/local/lib /usr/local/lib
+COPY --from=node /usr/local/include /usr/local/include
+COPY --from=node /usr/local/bin /usr/local/bin
+
 RUN npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
