@@ -12,4 +12,4 @@ PORT="$(bashio::addon.ingress_port)"
 
 bashio::log.info "Configuring N8n on address: ${ADDRESS}:${PORT}"
 
-export VUE_APP_URL_BASE_API="127.0.0.1:"
+export VUE_APP_URL_BASE_API="${ADDRESS}:${PORT}"
