@@ -14,15 +14,14 @@ arch:
   - i386
 ingress: true
 ingress_port: 5678
-host_network: true
 panel_icon: mdi:sitemap
 ports:
-  5678/tcp: 5678
+  80/tcp: 5678
 ports_description:
-  5678/tcp: N8N Web Interface
+  80/tcp: N8N Web Interface
 map:
   - ssl
 options:
   log_level: info
 schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  log_level: list(info|warn|error|verbose|debug)

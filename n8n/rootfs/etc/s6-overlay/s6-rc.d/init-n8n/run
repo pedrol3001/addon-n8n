@@ -6,3 +6,5 @@
 # ==============================================================================
 
 bashio::log.info "Oh, hi! I'm the init script!"
+
+export VUE_APP_URL_BASE_API="127.0.0.1:$(bashio::addon.ingress_port)"
