@@ -13,14 +13,14 @@ arch:
   - armv7
   - i386
 ingress: true
-ingress_port: 0
+ingress_port: 5678
 host_network: true
 ingress_stream: true
 panel_icon: mdi:sitemap
 ports:
-  80/tcp: 5678
+  5678/tcp: 5678
 ports_description:
-  80/tcp: Web interface
+  5678/tcp: N8N Web Interface
 map:
   - ssl
 options:
