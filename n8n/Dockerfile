@@ -6,13 +6,7 @@ FROM ${BUILD_FROM}
 
 ENV NODE_VERSION 16.19.0
 
-# hadolint ignore=DL3003
-# hadolint ignore=DL4006
-# hadolint ignore=SC2046
-# hadolint ignore=DL3018
-# hadolint ignore=SC2043
-# hadolint ignore=DL3059
-# hadolint ignore=SC2086
+# hadolint ignore=DL3003,DL3018,DL4006,SC2046
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
@@ -82,6 +76,7 @@ RUN addgroup -g 1000 node \
 
 ENV YARN_VERSION 1.22.19
 
+# hadolint ignore=SC2043,DL3018
 RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && for key in \
     6A010C5166006599AA17F08146C2130DFD2497F5 \
@@ -107,6 +102,7 @@ RUN apk add --no-cache \
     coreutils=9.1-r0 \
     wget=1.21.3-r2
 
+# hadolint ignore=SC2086,DL3059
 RUN npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
