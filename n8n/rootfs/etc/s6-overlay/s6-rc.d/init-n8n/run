@@ -7,4 +7,9 @@
 
 bashio::log.info "Oh, hi! I'm the init script!"
 
-export VUE_APP_URL_BASE_API="127.0.0.1:$(bashio::addon.ingress_port)"
+ADDRESS="$(bashio::addon.ip_address)"
+PORT="$(bashio::addon.ingress_port)"
+
+bashio::log.info "Configuring N8n on address: ${ADDRESS}:${PORT}"
+
+export VUE_APP_URL_BASE_API="127.0.0.1:"
