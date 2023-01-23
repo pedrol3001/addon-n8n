@@ -12,12 +12,15 @@ arch:
   - armhf
   - armv7
   - i386
-options:
-  log_level: info
+ingress: true
+ingress_port: 0
+ingress_stream: true
 panel_icon: mdi:sitemap
 ports:
   80/tcp: 5678
 ports_description:
   80/tcp: Web interface
+options:
+  log_level: info
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)
