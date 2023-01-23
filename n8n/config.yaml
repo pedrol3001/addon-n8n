@@ -14,6 +14,7 @@ arch:
   - i386
 ingress: true
 ingress_port: 0
+host_network: true
 ingress_stream: true
 panel_icon: mdi:sitemap
 ports:
