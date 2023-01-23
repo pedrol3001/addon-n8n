@@ -7,6 +7,6 @@ build_from:
   i386: ghcr.io/hassio-addons/base:13.0.0
 codenotary:
   base_image: codenotary@frenck.dev
-  signer: codenotary@frenck.dev
+  signer: pedrolcr@outlook.com
 args:
   N8N_VERSION: "0.210.2"
