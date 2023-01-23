@@ -1,10 +1,10 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Example
-# Runs example1 script
+# Home Assistant Community Add-on: N8N
+# Runs N8N script
 # ==============================================================================
 
-bashio::log.info "Starting Example1..."
+bashio::log.info "Starting N8N..."
 
 exec n8n start

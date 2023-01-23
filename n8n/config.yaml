@@ -1,9 +1,9 @@
 ---
-name: Example
+name: N8N
 version: dev
-slug: example
-description: Example add-on by Community Home Assistant Add-ons
-url: https://github.com/hassio-addons/addon-example
+slug: N8N
+description: N8N add-on by Community Home Assistant Add-ons
+url: https://github.com/pedrol3001/addon-n8n
 codenotary: contact@pedrol.me
 init: false
 arch:

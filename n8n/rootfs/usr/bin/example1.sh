@@ -1,9 +1,9 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Example
+# Home Assistant Community Add-on: N8N
 #
-# Example add-on for Home Assistant.
+# N8N add-on for Home Assistant.
 # This add-on displays a random quote every X seconds.
 # ==============================================================================
 

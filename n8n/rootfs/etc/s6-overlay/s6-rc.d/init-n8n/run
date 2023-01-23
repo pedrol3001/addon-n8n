@@ -1,8 +1,8 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Example
-# Example init script, runs before any other service
+# Home Assistant Community Add-on: N8N
+# N8N init script, runs before any other service
 # ==============================================================================
 
 bashio::log.info "Oh, hi! I'm the init script!"
