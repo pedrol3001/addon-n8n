@@ -1,4 +1,11 @@
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
+ARG N8N_VERSION=latest
+
 # hadolint ignore=DL3006
+FROM ${BUILD_FROM}
+
+ENV NODE_VERSION 16.19.0
+
 # hadolint ignore=DL3003
 # hadolint ignore=DL4006
 # hadolint ignore=SC2046
@@ -6,14 +13,6 @@
 # hadolint ignore=SC2043
 # hadolint ignore=DL3059
 # hadolint ignore=SC2086
-
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
-ARG N8N_VERSION=latest
-
-FROM ${BUILD_FROM}
-
-ENV NODE_VERSION 16.19.0
-
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
