@@ -1,7 +1,15 @@
+# hadolint ignore=DL3006
+# hadolint ignore=DL3003
+# hadolint ignore=DL4006
+# hadolint ignore=SC2046
+# hadolint ignore=DL3018
+# hadolint ignore=SC2043
+# hadolint ignore=DL3059
+# hadolint ignore=SC2086
+
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.0.0
 ARG N8N_VERSION=latest
 
-# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 ENV NODE_VERSION 16.19.0
