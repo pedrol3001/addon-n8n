@@ -1,7 +1,7 @@
 ---
 name: N8N
 version: dev
-slug: N8N
+slug: n8n
 description: N8N add-on by Community Home Assistant Add-ons
 url: https://github.com/pedrol3001/addon-n8n
 codenotary: contact@pedrol.me
