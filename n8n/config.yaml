@@ -13,7 +13,7 @@ arch:
   - armv7
   - i386
 ingress: true
-ingress_port: 0
+ingress_port: 8099
 ingress_stream: true
 host_network: true
 panel_icon: mdi:sitemap

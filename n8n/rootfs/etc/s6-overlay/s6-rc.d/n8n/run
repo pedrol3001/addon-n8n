@@ -7,9 +7,6 @@
 
 bashio::log.info "Starting N8N..."
 
-export N8N_HOST=127.0.0.1
-export N8N_PORT=28431
-
 if bashio::config.exists 'log_level'; then
   export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"
 fi
