@@ -11,6 +11,4 @@ if bashio::config.exists 'log_level'; then
   export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"
 fi
 
-bashio::log.info "Configuring N8n on address: ${ADDRESS}:${PORT}"
-
 #export VUE_APP_URL_BASE_API="${ADDRESS}:${PORT}"
