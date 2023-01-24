@@ -15,9 +15,9 @@ arch:
 ingress: true
 panel_icon: mdi:sitemap
 ports:
-  5678/tcp: 5678
+  80/tcp: 5678
 ports_description:
-  5678/tcp: Web Interface
+  80/tcp: Web Interface
 map:
   - ssl
 options:
