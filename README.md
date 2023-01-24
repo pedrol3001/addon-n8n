@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Community Add-on: N8N
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -21,11 +21,11 @@
 
 [![Support Frenck on Patreon][patreon-shield]][patreon]
 
-Example add-on by Community Home Assistant add-ons.
+N8N add-on by Community Home Assistant add-ons.
 
 ## About
 
-This is an example add-on for Home Assistant. When started, it displays a
+This is an N8N add-on for Home Assistant. When started, it displays a
 random quote every 5 seconds.
 
 It shows off several features and structures like:

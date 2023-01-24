@@ -1,6 +1,6 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Community Add-on: N8N
 
-This is an example add-on for Home Assistant. When started, it displays a
+This is an N8N add-on for Home Assistant. When started, it displays a
 random quote every 5 seconds.
 
 It shows off several features and structures like:
@@ -26,17 +26,17 @@ comparison to installing any other Home Assistant add-on.
    [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
 
 1. Click the "Install" button to install the add-on.
-1. Start the "Example" add-on.
-1. Check the logs of the "Example" add-on to see it in action.
+1. Start the "N8N" add-on.
+1. Check the logs of the "N8N" add-on to see it in action.
 
 ## Configuration
 
-Eventought this add-on is just an example add-on, it does come with some
+Eventought this add-on is just an N8N add-on, it does come with some
 configuration options to play around with.
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
 
-Example add-on configuration:
+N8N add-on configuration:
 
 ```yaml
 log_level: info
