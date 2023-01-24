@@ -18,6 +18,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
     && apk add --no-cache \
     coreutils=9.1-r0 \
     wget=1.21.3-r2 \
+    nginx=1.22.1-r0 \
     nodejs=18.12.1-r0 \
     npm=9.1.2-r0
 
