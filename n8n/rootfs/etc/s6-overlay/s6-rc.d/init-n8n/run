@@ -7,8 +7,9 @@
 
 bashio::log.info "Oh, hi! I'm the init script!"
 
-ADDRESS="$(bashio::addon.ip_address)"
-PORT="$(bashio::addon.ingress_port)"
+if bashio::config.exists 'log_level'; then
+  export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"
+fi
 
 bashio::log.info "Configuring N8n on address: ${ADDRESS}:${PORT}"
 
