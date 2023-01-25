@@ -13,6 +13,7 @@ arch:
   - armv7
   - i386
 ingress: true
+ingress_port: 0
 ingress_stream: true
 host_network: true
 panel_icon: mdi:sitemap
@@ -24,5 +25,12 @@ map:
   - ssl
 options:
   log_level: info
+  ssl: true
+  certfile: fullchain.pem
+  keyfile: privkey.pem
 schema:
   log_level: list(info|warn|error|verbose|debug)
+  ssl: bool
+  certfile: str
+  keyfile: str
+  leave_front_door_open: bool?

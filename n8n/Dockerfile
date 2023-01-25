@@ -20,7 +20,13 @@ RUN apk add --no-cache --virtual .build-dependencies \
     wget=1.21.3-r2 \
     nginx=1.22.1-r0 \
     nodejs=18.12.1-r0 \
-    npm=9.1.2-r0
+    npm=9.1.2-r0 \
+    \
+    && apk del --no-cache --purge .build-dependencies \
+    \
+    && rm -f -r \
+        /etc/nginx \
+        /tmp/*
 
 # hadolint ignore=SC2086,DL3059
 RUN npm install n8n@${N8N_VERSION} -g
