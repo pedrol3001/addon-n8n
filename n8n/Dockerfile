@@ -22,7 +22,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
     nodejs=18.12.1-r0 \
     npm=9.1.2-r0 \
     \
-    && npm install n8n@${N8N_VERSION} -g \
+    && npm install "n8n@${N8N_VERSION}" -g \
     \
     && npm cache clear --force \
     && apk del --no-cache --purge .build-dependencies \
@@ -32,9 +32,6 @@ RUN apk add --no-cache --virtual .build-dependencies \
         /root/.npm \
         /root/.nrpmrc \
         /tmp/*
-
-# hadolint ignore=SC2086,DL3059
-RUN npm install n8n@${N8N_VERSION} -g
 
 # Copy root filesystem
 COPY rootfs /
