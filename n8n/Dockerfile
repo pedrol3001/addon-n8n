@@ -22,8 +22,6 @@ RUN apk add --no-cache --virtual .build-dependencies \
     nodejs=18.12.1-r0 \
     npm=9.1.2-r0 \
     \
-    && apk del --no-cache --purge .build-dependencies \
-    \
     && rm -f -r \
         /etc/nginx \
         /tmp/*
