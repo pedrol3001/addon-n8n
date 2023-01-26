@@ -11,6 +11,7 @@ server {
         proxy_pass http://backend;
 
         sub_filter 'href="/' 'href="{{ .entry }}/';
+        sub_filter '/assets/' '{{ .entry }}/assets/';
         sub_filter '/static/' '{{ .entry }}/static/';
     }
 }
