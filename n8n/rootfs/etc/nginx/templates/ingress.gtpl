@@ -1,5 +1,5 @@
 server {
-    listen {{ .interface }}:{{ .port }} default_server;
+    listen 8099 default_server;
 
     include /etc/nginx/includes/server_params.conf;
     include /etc/nginx/includes/proxy_params.conf;
@@ -9,5 +9,8 @@ server {
         deny    all;
 
         proxy_pass http://backend;
+
+        sub_filter 'href="/' 'href="{{ .entry }}/';
+        sub_filter '/static/' '{{ .entry }}/static/';
     }
 }
