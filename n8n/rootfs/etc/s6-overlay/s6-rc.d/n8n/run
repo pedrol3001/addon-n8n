@@ -7,7 +7,7 @@
 
 bashio::log.info "Starting N8N..."
 
-export N8N_ENDPOINT_REST="$(bashio::addon.ingress_entry)/rest"
+export N8N_PATH="$(bashio::addon.entry)"
 
 if bashio::config.exists 'log_level'; then
   export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"
