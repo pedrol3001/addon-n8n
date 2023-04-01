@@ -15,7 +15,7 @@
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-N8N add-on 
+N8N add-on
 
 ## About
 
@@ -61,7 +61,6 @@ Want some more functionality to your Home Assistant instance?
 
 We have created multiple add-ons for Home Assistant. For a full list, check out
 our [GitHub Repository][repository].
-
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
