@@ -1,7 +1,5 @@
 # Home Assistant Community Add-on: N8N
 
-[![GitHub Release][releases-shield]][releases]
-![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
 ![Supports armhf Architecture][armhf-shield]
@@ -17,28 +15,11 @@
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
-
-N8N add-on by Community Home Assistant add-ons.
+N8N add-on 
 
 ## About
 
-This is an N8N add-on for Home Assistant. When started, it displays a
-random quote every 5 seconds.
-
-It shows off several features and structures like:
-
-- Full blown GitHub repository.
-- General Dockerfile structure and setup.
-- The use of the `config.yaml` and `build.yaml` files.
-- General structure on how to use S6 overlay with services.
-- Basic usage of Bashio.
-- Continuous integration and deployment using GitHub Actions.
-- Deployment to the GitHub Container registry.
-- Small use of the Bash function library in our base images.
-- The use of Docker label schema.
+This is an N8N add-on for Home Assistant.
 
 [:books: Read the full add-on documentation][docs]
 
@@ -81,29 +62,6 @@ Want some more functionality to your Home Assistant instance?
 We have created multiple add-ons for Home Assistant. For a full list, check out
 our [GitHub Repository][repository].
 
-## License
-
-MIT License
-
-Copyright (c) 2017-2022 Franck Nijhof
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
