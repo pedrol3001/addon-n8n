@@ -21,8 +21,6 @@ N8N add-on
 
 This is an N8N add-on for Home Assistant.
 
-[:books: Read the full add-on documentation][docs]
-
 ## Support
 
 Got questions?
