@@ -1,0 +1,27 @@
+{
+  "security": {
+    "basicAuth": {
+      "active": true,
+      "user": "%%USER%%",
+      "password": "%%PASSWORD%%"
+    }
+  },
+  "hiringBanner": {
+    "enabled": false
+  },
+  "diagnostics": {
+    "enabled": false
+  },
+  "versionNotifications": {
+    "enabled": false
+  },
+  "personalization": {
+    "enabled": false
+  },
+  "logs": {
+    "level": "%%LOG_LEVEL%%"
+  },
+  "protocol": "%%PROTOCOL%%",
+  "ssl_key": "/ssl/%%SSL_KEY%%",
+  "ssl_cert": "/ssl/%%SSL_CERT%%"
+}

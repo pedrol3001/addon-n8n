@@ -5,4 +5,44 @@
 # N8N init script, runs before any other service
 # ==============================================================================
 
-bashio::log.info "Oh, hi! I'm the init script!"
+bashio::log.info "Configuring N8N..."
+
+# Ensure configuration exists
+if ! bashio::fs.directory_exists '/config/n8n/'; then
+    mkdir -p /config/n8n/data || bashio::exit.nok "Failed to create n8n configuration directory"
+
+    # Copy in template files
+    cp /etc/n8n/config.json /config/n8n/
+fi
+
+if bashio::config.true 'ssl'; then
+    sed -i "s/%%PROTOCOL%%/https/" "/config/n8n/config.json"
+else
+    sed -i "s/%%PROTOCOL%%/http/" "/config/n8n/config.json"
+    sed -i "s/%%SSL_KEY%%/$(bashio::config 'keyfile')/" "/config/n8n/config.json"
+    sed -i "s/%%SSL_CERT%%/$(bashio::config 'certfile')/" "/config/n8n/config.json"
+fi
+
+# Sets user name for n8n basic auth
+if bashio::config.is_empty 'user'; then
+    bashio::log.fatal 'Please be sure to set the "user" option.'
+    bashio::exit.nok
+fi
+sed -i "s/%%USER%%/$(bashio::config 'user')/" "/config/n8n/config.json"
+
+# Sets password for n8n basic auth
+if bashio::config.is_empty 'password'; then
+    bashio::log.fatal 'Please be sure to set the "password" option.'
+    bashio::exit.nok
+fi
+sed -i "s/%%PASSWORD%%/$(bashio::config 'password')/" "/config/n8n/config.json"
+
+# Log level
+if bashio::config.exists 'log_level'; then
+  sed -i "s/%%LOG_LEVEL%%/$(bashio::string.lower "$(bashio::config 'log_level')")/" "/config/n8n/config.json"
+fi
+
+if [ "$(bashio::config 'log_level')" == "debug" ]; then
+  bashio::log.info "$(cat /config/n8n/config.json)"
+fi
+

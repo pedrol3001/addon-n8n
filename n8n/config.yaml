@@ -21,15 +21,19 @@ ports:
 ports_description:
   80/tcp: Web Interface
 map:
+  - config:rw
   - ssl
 options:
+  user: user
+  password: password
   log_level: info
-  ssl: true
+  ssl: false
   certfile: fullchain.pem
   keyfile: privkey.pem
 schema:
+  user: str
+  password: str
   log_level: list(info|warn|error|verbose|debug)
   ssl: bool
   certfile: str
   keyfile: str
-  leave_front_door_open: bool?

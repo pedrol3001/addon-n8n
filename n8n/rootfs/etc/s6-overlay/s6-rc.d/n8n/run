@@ -8,10 +8,9 @@
 bashio::log.info "Starting N8N..."
 
 export N8N_PATH="$(bashio::addon.ingress_entry)/"
-export VUE_APP_URL_BASE_API="http://localhost:7123/$(bashio::addon.ingress_entry)/"
-
-if bashio::config.exists 'log_level'; then
-  export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"
-fi
+export VUE_APP_URL_BASE_API="$(bashio::addon.ingress_entry)/"
+export N8N_USER_MANAGEMENT_DISABLED=true
+export N8N_USER_FOLDER="/config/n8n/data"
+export N8N_CONFIG_FILES=/config/n8n/config.json
 
 exec n8n start

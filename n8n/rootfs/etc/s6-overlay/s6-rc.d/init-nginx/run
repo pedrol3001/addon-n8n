@@ -1,8 +1,8 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
-# Configures NGINX for use with JupyterLab
+# Home Assistant Community Add-on: N8N
+# Configures NGINX for use N8N
 # ==============================================================================
 
 # Generate Ingress configuration
