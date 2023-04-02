@@ -7,7 +7,8 @@
 
 bashio::log.info "Starting N8N..."
 
-export N8N_PATH="$(bashio::addon.entry)"
+export N8N_PATH="$(bashio::addon.ingress_entry)/"
+export VUE_APP_URL_BASE_API="http://localhost:7123/$(bashio::addon.ingress_entry)/"
 
 if bashio::config.exists 'log_level'; then
   export N8N_LOG_LEVEL="$(bashio::string.lower "$(bashio::config 'log_level')")"

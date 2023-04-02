@@ -4,7 +4,7 @@
 # Runs the Nginx daemon
 # ==============================================================================
 
-# Wait for Node-RED to become available
+# Wait for N8N to become available
 bashio::net.wait_for 5678
 
 bashio::log.info "Starting NGinx..."

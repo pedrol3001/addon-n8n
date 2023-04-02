@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "sudo chmod +x /usr/bin/supervisor* && sudo -E supervisor_run",
       "group": {
-        "kind": "test",
+        "kind": "build",
         "isDefault": true
       },
       "presentation": {
