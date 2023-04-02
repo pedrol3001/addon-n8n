@@ -5,7 +5,7 @@
 # ==============================================================================
 
 # Wait for N8N to become available
-bashio::net.wait_for 5678
+bashio::net.wait_for 46543
 
 bashio::log.info "Starting NGinx..."
 exec nginx
