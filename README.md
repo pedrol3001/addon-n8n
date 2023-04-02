@@ -9,7 +9,6 @@
 ![Supports i386 Architecture][i386-shield]
 
 [![Github Actions][github-actions-shield]][github-actions]
-![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
 [![Discord][discord-shield]][discord]
