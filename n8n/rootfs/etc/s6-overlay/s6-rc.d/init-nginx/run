@@ -6,6 +6,8 @@
 # ==============================================================================
 
 # Generate Ingress configuration
+bashio::log.info "Configuring NGinx..."
+
 bashio::var.json \
     entry "$(bashio::addon.ingress_entry)" \
     interface "$(bashio::addon.ip_address)" \

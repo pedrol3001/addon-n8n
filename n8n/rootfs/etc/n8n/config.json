@@ -1,6 +1,7 @@
 {
   "port": 46543,
   "protocol": "http",
+  "editorBaseUrl":"%%PUBLIC_URL%%",
   "hiringBanner": {
     "enabled": false
   },

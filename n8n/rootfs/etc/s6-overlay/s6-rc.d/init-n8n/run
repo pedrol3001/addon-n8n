@@ -12,8 +12,11 @@ if ! bashio::fs.directory_exists '/config/n8n/'; then
     mkdir -p /config/n8n/data || bashio::exit.nok "Failed to create n8n configuration directory"
 
     # Copy in template files
+    rm /config/n8n/.config.json
     cp /etc/n8n/config.json /config/n8n/
 fi
+
+sed -i "s/%%PUBLIC_URL%%/"$(bashio::config 'public_url')"/" "/config/n8n/config.json"
 
 # Log level
 if bashio::config.exists 'log_level'; then
