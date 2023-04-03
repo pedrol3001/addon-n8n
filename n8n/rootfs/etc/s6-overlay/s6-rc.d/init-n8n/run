@@ -13,13 +13,12 @@ if ! bashio::fs.directory_exists '/config/n8n/data'; then
 fi
 
 # Copy in template files
-yes | cp -rf /etc/n8n/config.json /config/n8n/
-
+cp /etc/n8n/config.json /config/n8n/
 
 if bashio::config.exists 'public_url'; then
   sed -i "s/%%PUBLIC_URL%%/"$(bashio::config 'public_url')"/" "/config/n8n/config.json"
 else
-  sed -i "s/%%PUBLIC_URL%%//" "/config/n8n/config.json"
+  sed -i "s/%%PUBLIC_URL%%/''/" "/config/n8n/config.json"
 fi
 
 # Log level
