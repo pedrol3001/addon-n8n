@@ -13,8 +13,7 @@ if ! bashio::fs.directory_exists '/config/n8n/data'; then
 fi
 
 # Copy in template files
-rm /config/n8n/config.json
-cp /etc/n8n/config.json /config/n8n/
+yes | cp -rf /etc/n8n/config.json /config/n8n/
 
 
 if bashio::config.exists 'public_url'; then
