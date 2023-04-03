@@ -38,4 +38,4 @@ schema:
   ssl: bool
   certfile: str
   keyfile: str
-  public_url?: str
+  public_url: str?
