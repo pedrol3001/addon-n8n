@@ -16,7 +16,7 @@
 
 ## About
 
-[N8N][n8n] is a workflow automation tool that alows users to automate many tasks. One of this tools advantages is the high number of integrations it can use (including Home Assistant). 
+[N8N][n8n] is a workflow automation tool that alows users to automate many tasks. One of this tools advantages is the high number of integrations it can use (including Home Assistant).
 
 Since [N8N][n8n] can be self-hosted, this addon aims to create a n8n instance inside home assiatant.
 
@@ -80,4 +80,3 @@ check [the contributor's page][contributors].
 [repository]: https://github.com/pedrol3001/addon-n8n
 [frenck]: https://github.com/frenck
 [n8n]: https://n8n.io/
-
