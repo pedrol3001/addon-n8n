@@ -21,7 +21,7 @@ This is an N8N add-on for Home Assistant.
 ## Features
 - N8N self host
 - Ingress access
-- Direct connection with home assiatant authentication
+- Direct connection with home assistant authentication
 - SSl support
 
 ## Support
