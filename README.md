@@ -22,7 +22,7 @@ This is an N8N add-on for Home Assistant.
 - N8N self host
 - Ingress access
 - Direct connection with home assistant authentication
-- SSl support
+- SSL support
 
 ## Support
 
