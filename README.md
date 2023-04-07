@@ -12,7 +12,7 @@
 
 [![Community Forum][forum-shield]][forum]
 
-N8N add-on
+# N8N add-on
 
 ## About
 
@@ -29,7 +29,9 @@ This is an N8N add-on for Home Assistant.
 
 Got questions?
 
-You could [open an issue here][issue] GitHub.
+The development is inspired by Home Assiatant Communit Addons. You can seek for information o The Home Assistant [Community Forum][forum] or [Home Assistant Community Add-ons Discord chat server][discord]
+
+You could also [open an issue here][issue] GitHub.
 
 ## Contributing
 
@@ -56,6 +58,8 @@ check [the contributor's page][contributors].
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-example.svg
 [commits]: https://github.com/pedrol3001/addon-n8n/commits/main
 [contributors]: https://github.com/pedrol3001/addon-n8n/graphs/contributors
+[discord-ha]: https://discord.gg/c5DvZ4e
+[discord]: https://discord.me/hassioaddons
 [docs]: https://github.com/pedrol3001/addon-n8n/blob/main/example/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/repository-community-hass-io-add-ons/24705?u=frenck
@@ -72,3 +76,4 @@ check [the contributor's page][contributors].
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-example.svg
 [releases]: https://github.com/pedrol3001/addon-n8n/releases
 [repository]: https://github.com/pedrol3001/addon-n8n
+[frenck]: https://github.com/frenck
