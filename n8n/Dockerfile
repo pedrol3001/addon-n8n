@@ -1,5 +1,5 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.2.0
-ARG N8N_VERSION=1.12.0
+ARG N8N_VERSION=1.11.1
 
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
