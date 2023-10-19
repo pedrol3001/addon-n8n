@@ -12,8 +12,6 @@ RUN apk add --no-cache --virtual .build-dependencies \
     python3-dev=3.11.6-r0 \
     \
     && apk add --no-cache \
-    coreutils=9.1-r0 \
-    wget=1.21.3-r2 \
     nginx=1.24.0-r7 \
     nodejs=18.18.2-r0 \
     npm=9.6.6-r0 \
