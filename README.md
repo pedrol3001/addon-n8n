@@ -1,7 +1,5 @@
 # Home Assistant Community Add-on: N8N
 
-[![License][license-shield]](LICENSE.md)
-
 ![Supports armhf Architecture][armhf-shield]
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports aarch64 Architecture][aarch64-shield]
@@ -10,28 +8,30 @@
 
 [![Github Actions][github-actions-shield]][github-actions]
 [![GitHub Activity][commits-shield]][commits]
+[![License][license-shield]](LICENSE.md)
 
-[![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-N8N add-on
+# N8N add-on
+
+[N8N][n8n] is a workflow automation tool that alows users to automate many tasks. One of this tool`s advantages is the high number of integrations it can use (including Home Assistant).
 
 ## About
 
-This is an N8N add-on for Home Assistant.
+Since [N8N][n8n] can be self-hosted, this addon aims to create a n8n instance inside home assiatant.
+
+## Features
+
+- N8N self host
+- Ingress access
+- Direct connection with home assistant authentication
+- SSL support
 
 ## Support
 
 Got questions?
 
-You have several options to get them answered:
-
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
-- The Home Assistant [Community Forum][forum].
-- Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
+The development is inspired by Home Assiatant Communit Addons. You can seek for information o The Home Assistant [Community Forum][forum] or [Home Assistant Community Add-ons Discord chat server][discord]
 
 You could also [open an issue here][issue] GitHub.
 
@@ -52,13 +52,6 @@ The original setup of this repository is by [Franck Nijhof][frenck].
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
-
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
@@ -67,7 +60,6 @@ our [GitHub Repository][repository].
 [commits]: https://github.com/pedrol3001/addon-n8n/commits/main
 [contributors]: https://github.com/pedrol3001/addon-n8n/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
-[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
 [docs]: https://github.com/pedrol3001/addon-n8n/blob/main/example/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
