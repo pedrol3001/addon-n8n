@@ -7,16 +7,16 @@ FROM ${BUILD_FROM}
 # Setup base
 RUN apk add --no-cache --virtual .build-dependencies \
     build-base=0.5-r3 \
-    linux-headers=5.19.5-r0 \
-    py3-pip=22.3.1-r1 \
-    python3-dev=3.10.10-r0 \
+    linux-headers=6.3-r0 \
+    py3-pip=23.1.2-r0 \
+    python3-dev=3.11.6-r0 \
     \
     && apk add --no-cache \
     coreutils=9.1-r0 \
     wget=1.21.3-r2 \
-    nginx=1.22.1-r0 \
-    nodejs=18.14.2-r0 \
-    npm=9.1.2-r0 \
+    nginx=1.24.0-r7 \
+    nodejs=18.18.2-r0 \
+    npm=9.6.6-r0 \
     \
     && npm install "n8n@${N8N_VERSION}" -g \
     \
