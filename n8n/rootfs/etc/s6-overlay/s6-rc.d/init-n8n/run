@@ -15,6 +15,31 @@ fi
 # Copy in template files
 cp /etc/n8n/config.json /config/n8n/
 
+# Database
+if bashio::config.exists 'db_type'; then
+  sed -i "s/%%DB_TYPE%%/$(bashio::config 'db_type')/" "/config/n8n/config.json"
+fi
+
+if bashio::config.exists 'db_name'; then
+  sed -i "s/%%DB_NAME%%/$(bashio::config 'db_name')/" "/config/n8n/config.json"
+fi
+
+if bashio::config.exists 'db_host'; then
+  sed -i "s/%%DB_HOST%%/$(bashio::config 'db_host')/" "/config/n8n/config.json"
+fi
+
+if bashio::config.exists 'db_port'; then
+  sed -i "s/%%DB_PORT%%/$(bashio::config 'db_port')/" "/config/n8n/config.json"
+fi
+
+if bashio::config.exists 'db_user'; then
+  sed -i "s/%%DB_USER%%/$(bashio::config 'db_user')/" "/config/n8n/config.json"
+fi
+
+if bashio::config.exists 'db_password'; then
+  sed -i "s/%%DB_PASSWORD%%/$(bashio::config 'db_password')/" "/config/n8n/config.json"
+fi
+
 if bashio::config.exists 'public_url'; then
   sed -i "s/%%PUBLIC_URL%%/"$(bashio::config 'public_url')"/" "/config/n8n/config.json"
 else

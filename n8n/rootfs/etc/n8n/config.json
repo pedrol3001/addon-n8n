@@ -2,6 +2,23 @@
   "port": 45678,
   "protocol": "http",
   "editorBaseUrl": "%%PUBLIC_URL%%",
+  "db": {
+    "type": "%%DB_TYPE%%",
+    "mysqldb": {
+      "database": "%%DB_NAME%%",
+      "host": "%%DB_HOST%%",
+      "port": "%%DB_PORT%%",
+      "user": "%%DB_USER%%",
+      "password": "%%DB_PASSWORD%%"
+    },
+    "postgresdb": {
+      "database": "%%DB_NAME%%",
+      "host": "%%DB_HOST%%",
+      "port": "%%DB_PORT%%",
+      "user": "%%DB_USER%%",
+      "password": "%%DB_PASSWORD%%"
+    }
+  },
   "hiringBanner": {
     "enabled": false
   },

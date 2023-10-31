@@ -15,19 +15,9 @@ server {
     ssl_certificate_key /ssl/{{ .keyfile }};
     {{ end }}
 
-    location = /auth {
-        internal;
-        proxy_pass              http://supervisor/auth;
-        proxy_pass_request_body off;
-        proxy_set_header        Content-Length "";
-        proxy_set_header        X-Supervisor-Token "{{ env "SUPERVISOR_TOKEN" }}";
-    }
-
     location / {
-        auth_request /auth;
-        auth_request_set $auth_status $upstream_status;
-
-        rewrite ^{{ .entry }}(.*)$ $1 break;
+        allow   172.30.32.2;
+        deny    all;
 
         proxy_pass http://backend;
     }
