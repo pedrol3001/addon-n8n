@@ -46,5 +46,3 @@ schema:
   db_port: str?
   db_user: str?
   db_password: str?
-
-
