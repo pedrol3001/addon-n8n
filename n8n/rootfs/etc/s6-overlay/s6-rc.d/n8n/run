@@ -7,8 +7,10 @@
 
 bashio::log.info "Starting N8N..."
 
-export N8N_PATH="locahost:45678/"
-export VUE_APP_URL_BASE_API="locahost:45678/"
+admin_port=$(bashio::addon.port 80)
+
+export N8N_PATH="locahost:$(admin_port)/"
+export VUE_APP_URL_BASE_API="locahost:$(admin_port)/"
 export N8N_USER_FOLDER="/config/n8n/data"
 export N8N_CONFIG_FILES=/config/n8n/config.json
 
