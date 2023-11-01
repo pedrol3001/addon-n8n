@@ -2,7 +2,7 @@
   "port": 45678,
   "protocol": "http",
   "editorBaseUrl": "%%PUBLIC_URL%%",
-  "db": {
+  "database": {
     "type": "%%DB_TYPE%%",
     "mysqldb": {
       "database": "%%DB_NAME%%",

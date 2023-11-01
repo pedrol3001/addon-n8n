@@ -39,10 +39,10 @@ schema:
   ssl: bool
   certfile: str
   keyfile: str
-  public_url: str?
-  db_type: list(sqlite|postgresdb|mysqldb)?
+  db_type: list(sqlite|postgresdb|mysqldb)
   db_name: str?
   db_host: url?
   db_port: port?
   db_user: str?
   db_password: str?
+  public_url: str?
