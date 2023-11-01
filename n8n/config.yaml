@@ -46,3 +46,4 @@ schema:
   db_user: str?
   db_password: str?
   public_url: str?
+ 
