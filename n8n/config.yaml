@@ -41,8 +41,7 @@ schema:
   keyfile: str
   db_type: list(sqlite|postgresdb|mysqldb)
   db_name: str?
-  db_host: url?
+  db_host: str?
   db_port: port?
   db_user: str?
   db_password: str?
-  public_url: str?

@@ -7,49 +7,23 @@
 
 bashio::log.info "Configuring N8N..."
 
-# Ensure configuration exists
+# Ensure configuration data directory exists
 if ! bashio::fs.directory_exists '/config/n8n/data'; then
     mkdir -p /config/n8n/data || bashio::exit.nok "Failed to create n8n configuration directory"
 fi
 
-# Copy in template files
-cp /etc/n8n/config.json /config/n8n/
-
-# Database
-if bashio::config.exists 'db_type'; then
-  sed -i "s/%%DB_TYPE%%/$(bashio::config 'db_type')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'db_name'; then
-  sed -i "s/%%DB_NAME%%/$(bashio::config 'db_name')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'db_host'; then
-  sed -i "s/%%DB_HOST%%/$(bashio::config 'db_host')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'db_port'; then
-  sed -i "s/%%DB_PORT%%/$(bashio::config 'db_port')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'db_user'; then
-  sed -i "s/%%DB_USER%%/$(bashio::config 'db_user')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'db_password'; then
-  sed -i "s/%%DB_PASSWORD%%/$(bashio::config 'db_password')/" "/config/n8n/config.json"
-fi
-
-if bashio::config.exists 'public_url'; then
-  sed -i "s/%%PUBLIC_URL%%/"$(bashio::config 'public_url')"/" "/config/n8n/config.json"
-else
-  sed -i "s/%%PUBLIC_URL%%/''/" "/config/n8n/config.json"
-fi
-
-# Log level
-if bashio::config.exists 'log_level'; then
-  sed -i "s/%%LOG_LEVEL%%/$(bashio::string.lower "$(bashio::config 'log_level')")/" "/config/n8n/config.json"
-fi
+bashio::var.json \
+    dummy_path "a79a004-2514-48dc-8f9e-3a92132dab57" \
+    db_type "$(bashio::config 'db_type')" \
+    db_name "$(bashio::config 'db_name')" \
+    db_host "$(bashio::config 'db_host')" \
+    db_port "^$(bashio::config 'db_port')" \
+    db_user "$(bashio::config 'db_user')" \
+    db_password "$(bashio::config 'db_password')" \
+    log_level "$(bashio::string.lower "$(bashio::config 'log_level')")" \
+    | tempio \
+        -template /etc/n8n/config.gtpl \
+        -out /config/n8n/config.json
 
 if [ "$(bashio::config 'log_level')" == "debug" ]; then
   bashio::log.info "$(cat /config/n8n/config.json)"

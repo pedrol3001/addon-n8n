@@ -17,5 +17,8 @@ server {
 
     location / {
         proxy_pass http://backend;
+
+        sub_filter {{ .dummy_path }} /;
+        sub_filter_once off;
     }
 }
