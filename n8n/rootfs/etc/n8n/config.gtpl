@@ -20,6 +20,9 @@
       "password": "{{ .db_password }}"
     }
   },
+  "hideUsagePage": {
+    "enabled": true
+  },
   "hiringBanner": {
     "enabled": false
   },
