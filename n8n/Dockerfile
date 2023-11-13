@@ -12,7 +12,6 @@ RUN apk add --no-cache --virtual .build-dependencies \
     python3-dev=3.11.6-r0 \
     \
     && apk add --no-cache \
-    nginx=1.24.0-r7 \
     nodejs=18.18.2-r0 \
     npm=9.6.6-r0 \
     \
@@ -21,7 +20,6 @@ RUN apk add --no-cache --virtual .build-dependencies \
     && npm cache clear --force \
     && apk del --no-cache --purge .build-dependencies \
     && rm -fr \
-    /etc/nginx \
     /root/.cache \
     /root/.npm \
     /root/.nrpmrc \

@@ -12,10 +12,6 @@ arch:
   - armhf
   - armv7
   - i386
-ingress: true
-ingress_port: 0
-ingress_stream: true
-panel_icon: mdi:sitemap
 ports:
   80/tcp: 5678
 ports_description:
@@ -42,6 +38,7 @@ schema:
   db_type: list(sqlite|postgresdb|mysqldb)
   db_name: str?
   db_host: str?
+  public_url: str?
   db_port: port?
   db_user: str?
   db_password: str?
