@@ -13,7 +13,7 @@ if ! bashio::fs.directory_exists '/config/n8n/data'; then
 fi
 
 bashio::var.json \
-    dummy_path "a79a004-2514-48dc-8f9e-3a92132dab57" \
+    dummy_path "a79a004-2514-48dc-8f9e-3a92132dab57/" \
     db_type "$(bashio::config 'db_type')" \
     db_name "$(bashio::config 'db_name')" \
     db_host "$(bashio::config 'db_host')" \
