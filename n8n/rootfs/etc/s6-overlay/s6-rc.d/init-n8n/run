@@ -17,8 +17,6 @@ bashio::var.json \
     protocol "$($(bashio::config 'ssl') ? 'https' : 'http')" \
     host "$(bashio::addon.hostname)" \
     port "^$(bashio::addon.port 80)" \
-    ssl_cert "$(cat /ssl/$(bashio::config 'certfile'))" \
-    ssl_key "$(cat /ssl/$(bashio::config 'keyfile'))" \
     db_type "$(bashio::config 'db_type')" \
     db_name "$(bashio::config 'db_name')" \
     db_host "$(bashio::config 'db_host')" \

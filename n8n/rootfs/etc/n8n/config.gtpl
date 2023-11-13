@@ -1,10 +1,8 @@
 {
-  "protocol": {{ .protocol }}
+  "protocol": {{ .protocol }},
   "host": "localhost",
   "port": {{ .port }},
   "editorBaseUrl": "{{ .public_url }}",
-  "ssl_key": {{ .ssl_key }},
-  "ssl_cert": {{ .ssl_cert }},
   "database": {
     "type": "{{ .db_type }}",
     "mysqldb": {
