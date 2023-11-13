@@ -9,8 +9,5 @@ server {
         deny    all;
 
         proxy_pass http://backend;
-
-        sub_filter {{ .dummy_path }}  {{ .entry }}/;
-        sub_filter_once off;
     }
 }

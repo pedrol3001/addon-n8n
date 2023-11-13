@@ -2,7 +2,6 @@
   "host": "localhost",
   "port": 45678,
   "protocol": "http",
-  "path": "{{ .dummy_path }}",
   "database": {
     "type": "{{ .db_type }}",
     "mysqldb": {
