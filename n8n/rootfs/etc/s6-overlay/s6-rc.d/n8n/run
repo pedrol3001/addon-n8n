@@ -10,7 +10,7 @@ bashio::log.info "Starting N8N..."
 export N8N_USER_FOLDER="/config/n8n/data"
 export N8N_CONFIG_FILES=/config/n8n/config.json
 
-if ! bashio::config.has_value 'public_url'; then
+if bashio::config.has_value 'public_url'; then
   export N8N_EDITOR_BASE_URL="$(bashio::config 'public_url')"
 fi
 
