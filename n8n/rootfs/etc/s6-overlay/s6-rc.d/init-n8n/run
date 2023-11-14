@@ -12,12 +12,6 @@ if ! bashio::fs.directory_exists '/config/n8n/data'; then
     mkdir -p /config/n8n/data || bashio::exit.nok "Failed to create n8n configuration directory"
 fi
 
-if ! ; then
-  protocol="http";
-else
-  protocol=;
-fi
-
 bashio::var.json \
     protocol "$([[ $(bashio::config 'ssl') ]] && 'https' || 'http')" \
     public_url "$(bashio::config 'public_url' || '')" \
