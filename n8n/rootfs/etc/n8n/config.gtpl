@@ -2,7 +2,8 @@
   "protocol": "{{ .protocol }}",
   "host": "{{ .host }}",
   "port": "{{ .port }}",
-  "editorBaseUrl": "{{ .public_url }}",
+  "ssl_cert": "{{ .ssl_cert }}",
+  "ssl_key": "{{ .ssl_key }}",
   "database": {
     "type": "{{ .db_type }}",
     "mysqldb": {
