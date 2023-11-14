@@ -21,7 +21,7 @@ fi
 bashio::var.json \
     protocol "$protocol" \
     public_url "$(bashio::config 'public_url')" \
-    host "$(bashio::addon.hostname)" \
+    host "$(bashio::addon.hostname || '')" \
     port "^$(bashio::addon.port 80)" \
     db_type "$(bashio::config 'db_type')" \
     db_name "$(bashio::config 'db_name')" \
