@@ -1,23 +1,23 @@
 {
   "protocol": {{ .protocol }},
-  "host": "localhost",
+  "host": {{ .host }},
   "port": {{ .port }},
-  "editorBaseUrl": "{{ .public_url }}",
+  "editorBaseUrl": {{ .public_url }},
   "database": {
-    "type": "{{ .db_type }}",
+    "type": {{ .db_type }},
     "mysqldb": {
-      "database": "{{ .db_name }}",
-      "host": "{{ .db_host }}",
-      "port": "{{ .db_port }}",
-      "user": "{{ .db_user }}",
-      "password": "{{ .db_password }}"
+      "database": {{ .db_name }},
+      "host": {{ .db_host }},
+      "port": {{ .db_port }},
+      "user": {{ .db_user }},
+      "password": {{ .db_password }}
     },
     "postgresdb": {
-      "database": "{{ .db_name }}",
-      "host": "{{ .db_host }}",
-      "port": "{{ .db_port }}",
-      "user": "{{ .db_password }}",
-      "password": "{{ .db_password }}"
+      "database": {{ .db_name }},
+      "host": {{ .db_host }},
+      "port": {{ .db_port }},
+      "user": {{ .db_password }},
+      "password": {{ .db_password }}
     }
   },
   "hideUsagePage": true,
@@ -34,6 +34,6 @@
     "enabled": false
   },
   "logs": {
-    "level": "{{ .log_level }}"
+    "level": {{ .log_level }}
   }
 }
