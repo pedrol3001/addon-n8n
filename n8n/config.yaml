@@ -36,9 +36,9 @@ schema:
   certfile: str
   keyfile: str
   db_type: list(sqlite|postgresdb|mysqldb)
+  public_url: str?
   db_name: str?
   db_host: str?
-  public_url: str?
   db_port: port?
   db_user: str?
   db_password: str?
