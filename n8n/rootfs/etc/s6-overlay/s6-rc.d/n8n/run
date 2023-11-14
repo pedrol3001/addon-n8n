@@ -10,7 +10,7 @@ bashio::log.info "Starting N8N..."
 export N8N_USER_FOLDER="/config/n8n/data"
 export N8N_CONFIG_FILES=/config/n8n/config.json
 
-export N8N_SSL_CERT="$(cat /ssl/$(bashio::config 'certfile'))"
-export N8N_SSL_KEY="$(cat /ssl/$(bashio::config 'keyfile'))"
+export N8N_SSL_CERT="/ssl/$(bashio::config 'certfile')"
+export N8N_SSL_KEY="/ssl/$(bashio::config 'keyfile')"
 
 exec n8n start
