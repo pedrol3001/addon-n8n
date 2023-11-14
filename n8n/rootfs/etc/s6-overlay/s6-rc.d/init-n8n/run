@@ -19,7 +19,7 @@ else
 fi
 
 bashio::var.json \
-    protocol "$($protocol)" \
+    protocol "$protocol" \
     public_url "$(bashio::config 'public_url')" \
     host "$(bashio::addon.hostname)" \
     port "^$(bashio::addon.port 80)" \
