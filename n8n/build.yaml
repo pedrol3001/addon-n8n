@@ -9,4 +9,4 @@ codenotary:
   base_image: codenotary@frenck.dev
   signer: codenotary@frenck.dev
 args:
-  N8N_VERSION: "1.12.0"
+  N8N_VERSION: "1.18.0"
