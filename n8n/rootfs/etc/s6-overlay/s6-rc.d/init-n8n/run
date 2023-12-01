@@ -18,6 +18,8 @@ else
   protocol="https";
 fi
 
+# TODO public_url "$(bashio::config 'public_url')" \
+
 bashio::var.json \
     protocol "$protocol" \
     host "$(bashio::addon.hostname)" \

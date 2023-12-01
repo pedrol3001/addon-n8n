@@ -26,4 +26,4 @@ Even better: You could submit a pull request with a fix / new feature!
    the second reviewer to merge it for you.
 
 [github]: https://github.com/pedrol3001/addon-n8n/issues
-[prs]: https://github.com/pedrol3001/addon-n8nd/pulls
+[prs]: https://github.com/pedrol3001/addon-n8n/pulls

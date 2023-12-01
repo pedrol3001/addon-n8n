@@ -1,15 +1,15 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.2.2
-ARG N8N_VERSION=latest
 
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
+ARG N8N_VERSION
 
-# Setup base
+# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual .build-dependencies \
-    build-base=0.5-r3 \
-    linux-headers=6.3-r0 \
-    py3-pip=23.1.2-r0 \
-    python3-dev=3.11.6-r0 \
+    build-base \
+    linux-headers \
+    py3-pip \
+    python3-dev \
     \
     && apk add --no-cache \
     nodejs=18.18.2-r0 \
