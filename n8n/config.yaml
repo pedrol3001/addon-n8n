@@ -27,6 +27,7 @@ options:
   certfile: fullchain.pem
   keyfile: privkey.pem
   db_type: sqlite
+  public_url: ""
 schema:
   log_level: list(info|warn|error|verbose|debug)
   ssl: bool
