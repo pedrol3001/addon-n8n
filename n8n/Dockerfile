@@ -6,6 +6,9 @@ ARG BUILD_ARCH
 
 ARG N8N_VERSION=1.18.0
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual .build-dependencies \
     build-base \
@@ -22,10 +25,10 @@ RUN apk add --no-cache --virtual .build-dependencies \
     && npm cache clear --force \
     && apk del --no-cache --purge .build-dependencies \
     && rm -fr \
-    /root/.cache \
-    /root/.npm \
-    /root/.nrpmrc \
-    /tmp/*
+        /root/.cache \
+        /root/.npm \
+        /root/.nrpmrc \
+        /tmp/*
 
 # Copy root filesystem
 COPY rootfs /
