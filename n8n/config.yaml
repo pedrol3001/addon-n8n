@@ -17,10 +17,8 @@ ports:
 ports_description:
   80/tcp: Web Interface
 hassio_api: true
-hassio_role: manager
-homeassistant_api: true
+hassio_role: default
 host_network: true
-auth_api: true
 map:
   - addon_config:rw
   - ssl
