@@ -20,7 +20,7 @@ homeassistant_api: true
 host_network: true
 auth_api: true
 map:
-  - config:rw
+  - homeassistant_config:rw
   - ssl
 options:
   log_level: info
