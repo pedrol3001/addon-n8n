@@ -11,7 +11,7 @@ arch:
   - amd64
   - armhf
   - armv7
-z
+  - i386
 ports:
   80/tcp: 5678
 ports_description:
