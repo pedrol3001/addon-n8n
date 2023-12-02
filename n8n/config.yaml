@@ -7,9 +7,11 @@ url: https://github.com/pedrol3001/addon-n8n
 codenotary: contact@pedrol.me
 init: false
 arch:
-  - amd64
   - aarch64
+  - amd64
+  - armhf
   - armv7
+z
 ports:
   80/tcp: 5678
 ports_description:
