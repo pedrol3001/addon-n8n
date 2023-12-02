@@ -8,8 +8,8 @@
 bashio::log.info "Configuring N8N..."
 
 # Ensure configuration data directory exists
-if ! bashio::fs.directory_exists '/config/n8n/data'; then
-    mkdir -p /config/n8n/data || bashio::exit.nok "Failed to create n8n configuration directory"
+if ! bashio::fs.directory_exists '/config/data'; then
+    mkdir -p /config/data || bashio::exit.nok "Failed to create n8n configuration directory"
 fi
 
 if ! bashio::config.true 'ssl'; then
@@ -35,9 +35,9 @@ bashio::var.json \
     log_level "$(bashio::string.lower "$(bashio::config 'log_level')")" \
     | tempio \
         -template /etc/n8n/config.gtpl \
-        -out /config/n8n/config.json
+        -out /config/config.json
 
 if [ "$(bashio::config 'log_level')" == "debug" ]; then
-  bashio::log.info "$(cat /config/n8n/config.json)"
+  bashio::log.info "$(cat /config/config.json)"
 fi
 

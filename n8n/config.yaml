@@ -22,7 +22,7 @@ homeassistant_api: true
 host_network: true
 auth_api: true
 map:
-  - homeassistant_config:rw
+  - addon_config:rw
   - ssl
 options:
   log_level: info
