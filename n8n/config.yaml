@@ -13,7 +13,7 @@ arch:
   - armv7
   - i386
 ports:
-  80/tcp: 5678
+  80/tcp: 3111
 ports_description:
   80/tcp: Web Interface
 hassio_api: true
