@@ -29,7 +29,7 @@ fi
 bashio::var.json \
     protocol "$protocol" \
     host "$(bashio::addon.hostname)" \
-    port "^$(bashio::addon.port 3111)" \
+    port "^$port" \
     ssl_cert "/ssl/$(bashio::config 'certfile')" \
     ssl_key "/ssl/$(bashio::config 'keyfile')" \
     db_type "$(bashio::config 'db_type')" \
