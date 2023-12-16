@@ -35,7 +35,7 @@ ENV TFTPD_OPTS=''
 # Copy root filesystem
 COPY rootfs /
 
-EXPOSE 80
+EXPOSE 3011
 
 # Build arguments
 ARG BUILD_DATE

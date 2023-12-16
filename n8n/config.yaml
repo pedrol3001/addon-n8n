@@ -13,9 +13,9 @@ arch:
   - armv7
   - i386
 ports:
-  80/tcp: 3111
+  3011/tcp: 3011
 ports_description:
-  80/tcp: Web Interface
+  3011/tcp: Web Interface
 hassio_api: true
 host_network: true
 map:

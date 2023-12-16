@@ -21,15 +21,15 @@ else
   protocol="https";
 fi
 
-port="$(bashio::addon.port 80)"
+port="$(bashio::addon.port 3011)"
 if ! bashio::var.has_value "${port}"; then
-  port=80
+  port=3011
 fi
 
 bashio::var.json \
     protocol "$protocol" \
     host "$(bashio::addon.hostname)" \
-    port "^$(bashio::addon.port 80)" \
+    port "^$(bashio::addon.port 3011)" \
     ssl_cert "/ssl/$(bashio::config 'certfile')" \
     ssl_key "/ssl/$(bashio::config 'keyfile')" \
     db_type "$(bashio::config 'db_type')" \
