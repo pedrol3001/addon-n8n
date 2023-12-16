@@ -30,6 +30,8 @@ RUN apk add --no-cache --virtual .build-dependencies \
         /root/.nrpmrc \
         /tmp/*
 
+ENV TFTPD_OPTS=''
+
 # Copy root filesystem
 COPY rootfs /
 

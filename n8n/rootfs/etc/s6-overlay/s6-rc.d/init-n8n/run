@@ -18,7 +18,10 @@ else
   protocol="https";
 fi
 
-# TODO public_url "$(bashio::config 'public_url')" \
+port="$(bashio::addon.port 80)"
+if ! bashio::var.has_value "${port}"; then
+  port=80
+fi
 
 bashio::var.json \
     protocol "$protocol" \
