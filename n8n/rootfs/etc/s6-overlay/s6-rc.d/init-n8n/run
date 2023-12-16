@@ -7,6 +7,9 @@
 
 bashio::log.info "Configuring N8N..."
 
+declare port
+declare protocol
+
 # Ensure configuration data directory exists
 if ! bashio::fs.directory_exists '/config/data'; then
     mkdir -p /config/data || bashio::exit.nok "Failed to create n8n configuration directory"
