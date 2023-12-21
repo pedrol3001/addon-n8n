@@ -22,18 +22,16 @@ map:
   - addon_config:rw
   - ssl
 options:
-  log_level: info
   ssl: false
   certfile: fullchain.pem
   keyfile: privkey.pem
   db_type: sqlite
-  public_url: ""
 schema:
-  log_level: list(info|warn|error|verbose|debug)
   ssl: bool
   certfile: str
   keyfile: str
   db_type: list(sqlite|postgresdb|mysqldb)
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
   public_url: str?
   db_name: str?
   db_host: str?
