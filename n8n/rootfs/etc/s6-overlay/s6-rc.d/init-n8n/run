@@ -40,7 +40,7 @@ bashio::var.json \
     db_password "$(bashio::config 'db_password')" \
     log_level "$(bashio::string.lower "$(bashio::config 'log_level')")" \
     | tempio \
-        -template /etc/n8n/config.gtpl \
+        -template /etc/n8n/n8n.gtpl \
         -out /data/n8n.json
 
 if [ "$(bashio::config 'log_level')" == "debug" ]; then
