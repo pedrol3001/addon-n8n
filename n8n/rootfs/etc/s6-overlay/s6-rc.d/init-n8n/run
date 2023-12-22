@@ -41,9 +41,9 @@ bashio::var.json \
     log_level "$(bashio::string.lower "$(bashio::config 'log_level')")" \
     | tempio \
         -template /etc/n8n/config.gtpl \
-        -out /config/config.json
+        -out /data/n8n.json
 
 if [ "$(bashio::config 'log_level')" == "debug" ]; then
-  bashio::log.info "$(cat /config/config.json)"
+  bashio::log.info "$(cat /data/n8n.json)"
 fi
 
