@@ -4,7 +4,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.2.2
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
 
-ARG N8N_VERSION=1.18.0
+ARG N8N_VERSION=1.33.1
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
