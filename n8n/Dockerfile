@@ -17,7 +17,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
     python3-dev \
     \
     && apk add --no-cache \
-    nodejs=18.18.2-r0 \
+    nodejs=20.8.1-r0 \
     npm=9.6.6-r0 \
     \
     && npm install "n8n@${N8N_VERSION}" -g \
