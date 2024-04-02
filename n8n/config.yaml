@@ -16,6 +16,7 @@ ports_description:
 hassio_api: true
 host_network: true
 ingress: true
+ingress_port: 0
 map:
   - addon_config:rw
   - ssl
