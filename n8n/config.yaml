@@ -11,11 +11,11 @@ arch:
   - aarch64
 ports:
   3111/tcp: 3111
-webui: https://[HOST]:[PORT:3111]
 ports_description:
   3111/tcp: Web Interface
 hassio_api: true
 host_network: true
+ingress: true
 map:
   - addon_config:rw
   - ssl
